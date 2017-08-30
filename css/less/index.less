@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
+@options {
+  strictMaths: true;
+}
 @primary: #21252B;
 @secondary: #1072C7;
 @accent: #E06C75;
+@left-body-width: 20em;
+@right-body-width: calc(105em - @left-body-width);
 
 html, body {
   overflow: hidden;
@@ -15,9 +19,21 @@ html, body {
   height: 100%;
   width: 100%;
 }
+div {
+ text-align: center;
+ li {
+    margin: 0.5em 2em 0 0;
+    list-style: none;
+    font-size: 0.8em;
+    color:#FFF;
+    i {
+      color:@accent;
+    }
+  }
+}
 .left-body {
   height: 100em;
-  width: 15em;
+  width: @left-body-width;
   background-color: @primary;
   text-align: center;
   padding-top: 2em;
@@ -32,7 +48,7 @@ html, body {
   }
   span {
     position: absolute;
-    left: 1em;
+    left: calc((@left-body-width / 2) - (12em/2) - 0.8em);
     width: 12em;
     border:0.1px dashed white;
     opacity: 0.1;
@@ -42,20 +58,25 @@ html, body {
     width: 6em;
     border-radius: 6em;
     border: 2px solid @secondary;
+    &:hover {
+      max-width: 256px;max-height: 256px;
+      cursor:url("../../img/icons/zoom-in.png") , auto;
+    }
   }
 }
 .left-body ul, .left-body-tablet ul {
   padding: 2em 0.3em;
   span {
-    left: 1.4em;
-    margin:-0.6em 0 0 0;
+    left: calc((@left-body-width / 2) - (12em/2) - 0.8em);
+    margin:0em 0 0 0;
   }
 }
-.left-body ul li, .left-body-tablet ul li {
+.left-body ul li {
   list-style: none;
   margin: 0.1em 0 0 0;
   padding: 0.7em 0 0 0.5em;
   font-weight: 600;
+  float: left;
   height: 3em;
   width: 100%;
   font-size: 1em;
@@ -63,11 +84,12 @@ html, body {
   display: table;
   text-align: left;
   color:#FFF;
-  // text-transform:capitalize;
   cursor: pointer;
+
   i.left {
     color:@accent;
   }
+
   &:nth-child(1) {
     background-color: @secondary;
     border-radius: 2em;
@@ -78,6 +100,7 @@ html, body {
       visibility: hidden;
     }
   }
+
   &:hover {
     border:1px solid @secondary;
     border-radius: 2em;
@@ -88,6 +111,7 @@ html, body {
       visibility: hidden;
     }
   }
+
   &:active {
     background-color: @secondary;
   }
@@ -95,6 +119,14 @@ html, body {
 .left-body ul li i.chevron,.left-body-tablet ul li i.chevron  {
   float: right;
   color:@secondary;
+  padding-right: 2em;
+}
+// MODAL
+#modal {
+  text-align: center;
+}
+.modal-gnb-img {
+  border: 2px solid @secondary;
 }
 
 // TABLET|IPAD
@@ -127,9 +159,16 @@ html, body {
     opacity: 0.1;
   }
 }
+.right-body {
+  width: @right-body-width;
+  background-color: #FFF;
+  height: 100em;
+  z-index: 1;
+  position: absolute;
+  left:@left-body-width;
+}
 
-
-// MOBILE
+// ---------- MOBILE ------------ //
 .left-body-mobile {
   height: 100em;
   width: 5em;
