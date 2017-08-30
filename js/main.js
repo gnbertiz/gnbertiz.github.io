@@ -50,5 +50,6 @@ $(document).ready(function() {
 
     $('.main').css("visibility" , "visible");
     $('body p:nth-child(1)').css("display" , "none");
+    $('.gnb-img').dimmer({on:'hover'});
   }, 1000);
 });
