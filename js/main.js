@@ -44,12 +44,46 @@ var init = {
   }
 }
 $(document).ready(function() {
+  var p_info,
+      educ,
+      tbody;
   setTimeout(function() {
     // Setup
     controls.events();
-
     $('.main').css("visibility" , "visible");
     $('body p:nth-child(1)').css("display" , "none");
     $('.gnb-img').dimmer({on:'hover'});
   }, 1000);
+  $('.ui.sticky').sticky({context: '#context'});
+  p_info = [
+      ['Name' ,'Genesis N. Bertiz'],
+      ['Address' , '<i class="marker red left icon"></i>#156 Buklod ng Nayon St., Sangandaan, Caloocan City'],
+      ['Age' , '24 yrs'],
+      ['Date of Birth' , '<i class="calendar teal left icon"></i>August 8, 1993'],
+      ['Place of Birth' , 'Manila'],
+      ['Gender' , '<i class="male orange left icon"></i>Male'],
+      ['Height' , '5 \' 2'],
+      ['Weight' , '62 kgs'],
+      ['Citizenship' , '<i class="ph flag"></i>Filipino'],
+      ['Civil Status' , 'Single'],
+  ];
+  educ = [
+    ["Tertiary", ["University of Caloocan City" , "Computer Science" , "2013-2017"]]
+  ];
+  tbody = "";
+  $.each(p_info , function(i , v) {
+    tbody += '<tr>' +
+    '<td>' + p_info[i][0] + '</td>' +
+    '<td>' + p_info[i][1] + '</td>' +
+    '</tr>';
+  });
+  $('.ui.definition.table .tbody_personal').html(tbody);
+  tbody = "";
+  $.each(educ , function(i , v) {
+    tbody += '<tr>' +
+    '<td>' + p_info[i][0] + '</td>' +
+    '<td>' + p_info[i][1] + '</td>' +
+    '</tr>';
+  });
+  // $('.ui.definition.table .tbody_educ').html(tbody);
 });

@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="lib/semantic/semantic.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet/less" href="css/less/index.less">
+
         <script src="lib/jquery.min.js"></script>
     </head>
     <body>
@@ -40,48 +40,121 @@
         <div class="main">
           <div class="main-header"></div>
           <div class="main-body">
-            <div class="ui grid">
+            <!-- <div class="ui grid"> -->
               <div class="computer tablet only row">
-                <div class="left-body">
-                  <img src="img/gnb.jpg" class="gnb-img"/>
-                  <div>
-                    <li><i class="marker left icon"></i>#156 Buklod ng Nayon St.,<br>Sangandaan, Caloocan City</li>
-                    <span></span>
-                    <li><i class="phone left icon"></i>+639067557278</li>
-                    <span></span>
-                    <li><i class="mail left icon"></i>gnbertiz.dev@outlook.com</li>
-                    <span></span>
-                    <li><i class="github left icon"></i>gnbertiz01@gmail.com</li>
-                    <span></span>
-                    <li><i class="facebook left icon"></i>www.facebook.com/genbertiz</li>
-                    <span></span>
+                <div id="context"></div>
+                <div class="ui rail">
+                  <div class="ui sticky">
+                    <div class="left-body">
+                      <img src="img/gnb.jpg" class="gnb-img"/>
+                      <li>Programmer / Designer</li>
+                      <div>
+                        <li><i class="marker left icon"></i>#156 Buklod ng Nayon St.,<br>Sangandaan, Caloocan City</li>
+                        <span></span>
+                        <li><i class="phone left icon"></i>+639067557278</li>
+                        <span></span>
+                        <li><i class="mail left icon"></i>gnbertiz.dev@outlook.com</li>
+                        <span></span>
+                        <li><i class="github left icon"></i>gnbertiz01@gmail.com</li>
+                        <span></span>
+                        <li><i class="facebook left icon"></i>www.facebook.com/genbertiz</li>
+                        <span></span>
+                      </div>
+                      <h4 class="ui horizontal divider header" style="color:white;">
+                        Description
+                      </h4>
+                      <ul>
+                        <li><i class="info access left icon"></i>Personal Info.<i class="chevron right icon"></i></li>
+                        <li><i class="universal access left icon"></i>Career Objective<i class="chevron right icon"></i></li>
+                        <li><i class="student left icon"></i>Education<i class="chevron right icon"></i></li>
+                        <li><i class="child left icon"></i>Skills<i class="chevron right icon"></i></li>
+                        <li><i class="attach left icon"></i>Projects<i class="chevron right icon"></i></li>
+                      </ul>
+                    </div>
                   </div>
-                  <h4 class="ui horizontal divider header" style="color:white;">
-                    Description
-                  </h4>
-                  <ul>
-                    <li><i class="info access left icon"></i>Personal Info.<i class="chevron right icon"></i></li>
-                    <li><i class="universal access left icon"></i>Objective<i class="chevron right icon"></i></li>
-                    <li><i class="student left icon"></i>Education<i class="chevron right icon"></i></li>
-                    <li><i class="child left icon"></i>Skills<i class="chevron right icon"></i></li>
-                    <li><i class="attach left icon"></i>Projects<i class="chevron right icon"></i></li>
-                  </ul>
                 </div>
                 <div class="right-body">
-                  <div class="ui relaxed divided list">
-                    <div class="item">
-                      <i class="large user middle aligned icon"></i>
+                  <div class="right-body-main">
+                    <h2 class="ui teal header">
+                      <img class="ui image" src="img/icons/info.svg">
                       <div class="content">
-                        <a class="header">Personal Information</a>
-                        <div class="description"></div>
+                        Personal Information
                       </div>
+                    </h2>
+                    <table class="ui definition table">
+                      <tbody class="tbody_personal">
+                      </tbody>
+                    </table>
+                    <h2 class="ui teal header">
+                      <img src="img/icons/success.svg">
+                      <div class="content">
+                        Career Objective
+                      </div>
+                    </h2>
+                    <div class="ui stacked segment">
+                      " Seeking challenging work whereby i could utilize, perform and contribute to the growth of the company."
                     </div>
+                    <h2 class="ui teal header">
+                      <img src="img/icons/education.svg">
+                      <div class="content">
+                        Education
+                      </div>
+                    </h2>
+                    <table class="ui definition table">
+                      <tbody class="tbody_educ">
+                        <tr>
+                          <td>Tertiary<td>
+                            <td>
+                              <strong>University of Caloocan City</strong>
+                              <br/>
+                              Bachelor of Science in Computer Science
+                              <br/>
+                              2013-2017
+                            <td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h2 class="ui teal header">
+                      <img src="img/icons/skill.svg">
+                      <div class="content">
+                        SKILLS
+                      </div>
+                    </h2>
+                    <h5 class="ui top attached header">
+                      Graphics
+                    </h5>
+                    <div class="ui attached segment">
+                      <!-- <img src="img/icons/skill.svg"> -->
+                    <!-- <table class="ui small definition table">
+                      <tbody class="tbody_skills">
+                        <tr>
+                          <td>Tertiary<td>
+                            <td>
+                              <strong>University of Caloocan City</strong>
+                              <br/>
+                              Bachelor of Science in Computer Science
+                              <br/>
+                              2013-2017
+                            <td>
+                        </tr>
+                      </tbody>
+                    </table> -->
+                    </div>
+                    <h5 class="ui top attached header">
+                      Graphics
+                    </h5>
+                    <h2 class="ui teal header">
+                      <img src="img/icons/idea.svg">
+                      <div class="content">
+                        PROJECTS
+                      </div>
+                    </h2>
                   </div>
                 </div>
               </div>
               <!--  TABLET -->
               <!--  MOBILE -->
-              <div class="mobile only row">
+              <!-- <div class="mobile only row">
                 <div class="left-body-mobile">
                   <img src="img/gnb.jpg" class="gnb-img"/>
                   <ul>
@@ -92,8 +165,8 @@
                     <li><i class="attach left icon"></i></li>
                   </ul>
                 </div>
-              </div>
-            </div>
+              </div> -->
+            <!-- </div> -->
           </div>
           <div class="main-footer"></div>
         </div>
@@ -112,6 +185,7 @@
         <!-- SCRIPTS -->
         <script src="js/main.js"></script>
         <script src="lib/semantic/semantic.min.js"></script>
+        <link rel="stylesheet/less" href="css/less/index.less">
         <script src="lib/less.min.js"></script>
         <script src=""></script>
     </body>

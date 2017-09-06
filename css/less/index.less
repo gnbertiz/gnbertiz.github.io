@@ -2,25 +2,24 @@
 @options {
   strictMaths: true;
 }
-@primary: #21252B;
+@primary: #00050C;
 @secondary: #1072C7;
 @accent: #E06C75;
 @left-body-width: 20em;
-@right-body-width: calc(105em - @left-body-width);
+@right-body-width: calc(100em - @left-body-width);
 
 html, body {
-  overflow: hidden;
+  // overflow: hidden;
   font-family: 'Raleway', sans-serif;
 }
 .ui.grid .row {
   margin-left: 1em;
 }
 .main-body {
-  height: 100%;
-  width: 100%;
+  width: 100em;
 }
 div {
- text-align: center;
+ // text-align: center;
  li {
     margin: 0.5em 2em 0 0;
     list-style: none;
@@ -32,11 +31,15 @@ div {
   }
 }
 .left-body {
-  height: 100em;
+  overflow: hidden;
+  height: 50em;
   width: @left-body-width;
   background-color: @primary;
   text-align: center;
   padding-top: 2em;
+  li {
+    margin-bottom: 2em;
+  }
   div li {
     margin: 0.5em 2em 0 0;
     list-style: none;
@@ -159,19 +162,22 @@ div {
     opacity: 0.1;
   }
 }
+.left-body {
+  position: fixed;
+  float: left;
+}
 .right-body {
-  width: @right-body-width;
-  background-color: #FFF;
+  overflow: scroll;
+  width:@right-body-width;
   height: 100em;
-  z-index: 1;
-  position: absolute;
-  left:@left-body-width;
-  padding: 4em;
-  div {
-    position: relative;
-    text-align: center;
-    margin: auto;
-  }
+  float: right;
+  left: @left-body-width;
+  background-color: #FFF;
+}
+.right-body-main {
+  // position: relative;
+  text-align: left;
+  margin: 2em;
 }
 
 // ---------- MOBILE ------------ //
